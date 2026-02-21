@@ -1,0 +1,11 @@
+# Core data stack
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+jupyter
+joblib
+pytest
+
+# Add task-specific packages as needed and pin versions before submission.
