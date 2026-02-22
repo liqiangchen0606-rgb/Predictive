@@ -1,44 +1,43 @@
 {
-  "best_model": "logistic_regression",
+  "best_model": "rf_untuned",
   "validation_comparison": [
     {
-      "model": "logistic_regression",
-      "accuracy": 0.7487579843860894,
-      "precision": 0.5168350168350169,
-      "recall": 0.820855614973262,
-      "f1": 0.6342975206611571,
-      "roc_auc": 0.859332454984629
+      "model": "hist_gradient_boosting",
+      "accuracy": 0.7998575498575499,
+      "precision": 0.6573426573426573,
+      "recall": 0.5067385444743935,
+      "f1": 0.5722983257229832,
+      "roc_auc": 0.8307888206699143,
+      "log_loss": 0.44136113358643464
     },
     {
       "model": "random_forest",
-      "accuracy": 0.8005677785663591,
-      "precision": 0.6207792207792208,
-      "recall": 0.6390374331550802,
-      "f1": 0.6297760210803689,
-      "roc_auc": 0.8490661086569015
+      "accuracy": 0.792022792022792,
+      "precision": 0.6010230179028133,
+      "recall": 0.633423180592992,
+      "f1": 0.6167979002624672,
+      "roc_auc": 0.8290327546752322,
+      "log_loss": 0.4461254509197685
     },
     {
-      "model": "hist_gradient_boosting",
-      "accuracy": 0.801277501774308,
-      "precision": 0.6506410256410257,
-      "recall": 0.5427807486631016,
-      "f1": 0.5918367346938775,
-      "roc_auc": 0.8436952646671316
+      "model": "logistic_regression",
+      "accuracy": 0.7443019943019943,
+      "precision": 0.5105633802816901,
+      "recall": 0.7816711590296496,
+      "f1": 0.617678381256656,
+      "roc_auc": 0.8411347369684509,
+      "log_loss": 0.48987696560393257
     },
     {
       "model": "baseline_dummy",
-      "accuracy": 0.7345635202271115,
+      "accuracy": 0.7357549857549858,
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
-      "roc_auc": 0.5
+      "roc_auc": 0.5,
+      "log_loss": 9.524355703249618
     }
   ],
-  "test_metrics": {
-    "accuracy": 0.7416607523066004,
-    "precision": 0.5083892617449665,
-    "recall": 0.8101604278074866,
-    "f1": 0.6247422680412371,
-    "roc_auc": 0.8320519775762742
-  }
+  "final_eval_ran": false,
+  "test_metrics": null
 }

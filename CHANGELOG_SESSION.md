@@ -1,19 +1,12 @@
 # Session Change Log
 
-Session started: 2026-02-21
+Session restarted: 2026-02-22
 
 | # | Action | File(s) | Description |
 |---:|--------|---------|-------------|
-| 1 | Create | `CHANGELOG_SESSION.md` | Initialized session change log |
-| 2 | Update | `README.md` | Replaced minimal placeholder with full coursework-oriented repo guide and structure |
-| 3 | Create | `requirements.txt` | Added starter environment specification template |
-| 4 | Create | `src/__init__.py`, `src/pipeline.py` | Added source package scaffold and minimal pipeline entry point |
-| 5 | Create | `data/README.md` | Added data access, licensing, schema, and reproducibility template |
-| 6 | Create | `docs/workflow_evidence.md`, `docs/project_checklist.md` | Added workflow evidence log and artefact compliance checklist |
-| 7 | Create | `appendix/agent_usage_log.md`, `appendix/decision_register.md` | Added required appendix templates and initial populated records |
-| 8 | Create | `artifacts/README.md` | Added guidance for storing reproducible outputs |
-| 9 | Create | `tests/README.md`, `tests/test_smoke.py` | Added starter testing scaffold |
-| 10 | Update | `src/pipeline.py` | Implemented full reusable churn modeling pipeline (load/clean/split/preprocess/train/evaluate/export) |
-| 11 | Update | `data/README.md` | Added dataset-specific access and project assumptions for Kaggle Telco churn |
-| 12 | Update | `requirements.txt`, `tests/test_smoke.py` | Added testing/runtime dependencies and data-cleaning smoke test |
-| 13 | Update | `MSIN0097_Individual.ipynb` | Rebuilt notebook-first end-to-end workflow with 21 cells using KaggleHub import and modeling stages |
+| 1 | Update | `docs/workflow_evidence.md`, `appendix/agent_usage_log.md`, `appendix/decision_register.md` | Project restart baseline: defined predictive problem, recall-first metric strategy, reproducible repo structure, and agent-usage documentation approach |
+| 2 | Update | `MSIN0097_Individual.ipynb`, `docs/workflow_evidence.md`, `appendix/agent_usage_log.md`, `appendix/decision_register.md` | Implemented churn-focused EDA additions and reproducible figure export (class imbalance with percentages, segment churn patterns, pitfalls notes, and saved plots under `artifacts/figures`) |
+| 3 | Update | `MSIN0097_Individual.ipynb`, `docs/workflow_evidence.md`, `appendix/agent_usage_log.md`, `appendix/decision_register.md` | Implemented Step 3 leakage-safe preprocessing in notebook: modular cleaning/split functions, stratified train/validation/test split, train-only fitted `Pipeline` + `ColumnTransformer`, and saved fitted preprocessing object (`artifacts/preprocessing_pipeline.joblib`) |
+| 4 | Update | `MSIN0097_Individual.ipynb`, `docs/workflow_evidence.md`, `appendix/agent_usage_log.md`, `appendix/decision_register.md` | Caught and corrected preprocessing mistake: duplicate removal order was too late; updated logic to deduplicate exact raw records before dropping ID fields and marked the earlier approach as rejected |
+| 5 | Update | `MSIN0097_Individual.ipynb`, `docs/workflow_evidence.md`, `appendix/agent_usage_log.md`, `appendix/decision_register.md` | Implemented Section 4 model comparison via train-only cross-validation (Dummy, LogisticRegression, RandomForest, HistGradientBoosting), set recall as primary ranking metric, and exported results to `artifacts/model_comparison_section4_cv.csv` |
+| 6 | Update | `MSIN0097_Individual.ipynb`, `docs/workflow_evidence.md`, `appendix/agent_usage_log.md`, `appendix/decision_register.md` | Corrected Section 4 metric strategy mistake: rejected recall-primary ranking and switched to PR-AUC-primary ranking (with recall/F1/ROC-AUC/log-loss as supporting metrics) for imbalanced churn targeting |

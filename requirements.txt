@@ -7,5 +7,7 @@ seaborn
 jupyter
 joblib
 pytest
+kagglehub
+scipy
 
 # Add task-specific packages as needed and pin versions before submission.
