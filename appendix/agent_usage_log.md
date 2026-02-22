@@ -94,3 +94,15 @@ For each entry include:
 - Impact: Improved business alignment of shortlist criterion for churn targeting under class imbalance.
 - Evidence: 
 ![Predictive/appendix/entry6_Primary_metric_Correction.png](entry6_Primary_metric_Correction.png)
+
+### Entry 007
+
+- Date: `2026-02-22`
+- Task: Add feature engineering variables in Step 3 and preview engineered dataset
+- Interaction summary: Requested direct notebook edits to create `is_new_customer`, `avg_charge_per_tenure`, and `service_count`; additionally requested a quick head preview after feature creation.
+- Agent output: Added a feature-engineering cell that computes the three variables and applies them consistently to `X`, `X_train`, `X_val`, and `X_test`; appended `X_train.head()` preview.
+- Verification performed: Confirmed requested columns and preview statement are present in the Step 3 feature-engineering cell.
+- Outcome: Accepted.
+- Impact: Expanded predictive signal space and improved auditability of transformed data before model tuning.
+- Evidence:
+![Predictive/appendix/entry7_Feature_engineering.png](entry7_Feature_engineering.png)

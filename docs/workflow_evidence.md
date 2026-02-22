@@ -8,7 +8,7 @@ This file documents stage-by-stage evidence of the workflow:
 - Project: `MSIN0097 Individual Coursework`
 - Owner: `Chen Liqiang`
 - Restarted: `2026-02-22`
-- Current stage: `Step 4 model comparison complete`
+- Current stage: `Step 3 feature engineering added`
 
 ## Evidence Log
 
@@ -20,6 +20,7 @@ This file documents stage-by-stage evidence of the workflow:
 | 2026-02-22 | Mistake correction | Fix duplicate-handling logic that could collapse distinct customers after ID drop | Asked agent to revise Step 3 dedup logic after identifying flaw | Verified dedup now occurs on exact raw rows before dropping `customerID`; prior approach explicitly rejected | Accepted correction | Provides explicit agent-mistake evidence for verify/revise requirement |
 | 2026-02-22 | Step 4 model comparison | Compare multiple models with CV using training/validation only and export results | Asked agent to implement structured CV comparison code for four classifiers and save outputs to CSV | Verified requested models/metrics present, no test usage in Section 4, and CSV output path exists in code | Accepted | Established evidence-based shortlist workflow with recall-priority ranking |
 | 2026-02-22 | Metric correction | Correct Section 4 primary metric choice from recall-first to PR-AUC-first for imbalanced targeting | Asked agent to revise Section 4 ranking/scoring strategy after identifying mismatch with business objective | Verified PR-AUC is now primary metric in CV and validation ranking while recall/F1/ROC-AUC/log-loss remain tracked | Accepted correction | Aligns model selection with precision-sensitive targeting under class imbalance |
+| 2026-02-22 | Step 3 feature engineering | Add engineered predictors after split with leakage-safe application across train/val/test | Asked agent to create three features and show a preview of the current engineered dataset | Verified new variables (`is_new_customer`, `avg_charge_per_tenure`, `service_count`) and `X_train.head()` preview are present in Step 3 cell | Accepted | Improved predictor set transparency and interpretability before tuning |
 
 ## Stage Checklist
 
